@@ -18,11 +18,13 @@ jobs:
         
         run: echo "Hello from GitHub Actions!"
 
-      - name: Intentional failure
+      - name: Intentional failure (allowed)
+
+        continue-on-error: true
         
         run: |
-        
-          echo "This step will fail on purpose"
+
+          echo "This step will fail, but the job will continue"
 
           exit 1
 
