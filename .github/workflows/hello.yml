@@ -4,7 +4,7 @@ on:
 
   push:
 
-    workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
 
@@ -22,6 +22,6 @@ jobs:
         
         run: |
         
-        echo "Runner OS: $RUNNER_OS"
+          echo "Runner OS: $RUNNER_OS"
         
-        echo "Branch: $GITHUB_REF_NAME"
+          echo "Branch: $GITHUB_REF_NAME"
