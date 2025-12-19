@@ -18,6 +18,14 @@ jobs:
         
         run: echo "Hello from GitHub Actions!"
 
+      - name: Intentional failure
+        
+        run: |
+        
+          echo "This step will fail on purpose"
+
+          exit 1
+
       - name: Show environment
         
         run: |
