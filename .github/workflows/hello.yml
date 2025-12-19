@@ -1,0 +1,13 @@
+name: Hello World
+on: [push]
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      -name: Say Hello
+      run: echo "Hello from GitHub Actions!"
+
+      -name: Show environment
+      run: |
+        echo "Runner OS: $RUNNER_OS"
+        echo "Branch: $GITHUB_REF_NAME"
