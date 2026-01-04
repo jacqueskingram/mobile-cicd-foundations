@@ -1,0 +1,49 @@
+name: Multi-Environment
+
+on:
+
+ workflow_dispatch:
+
+    inputs:
+
+      environment:
+
+        description: 'Environment to deploy'
+
+        required: true
+
+        type: choice
+
+        options:
+
+          - dev
+
+          - staging
+
+          - prod
+
+jobs:
+
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Check environment
+
+        run: |
+
+          ENV="${{ inputs.environment }}"
+
+          echo "Deploying to: $ENV"
+
+          if [ "$ENV" != "prod" ] && [ "$ENV" != "staging" ]; then
+
+          echo "Skipping deployment for $ENV"
+
+          exit 0
+
+          fi
+
+          echo "Deploying to $ENV..."
