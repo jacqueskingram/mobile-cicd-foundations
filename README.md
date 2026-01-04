@@ -35,7 +35,7 @@ Part of the Mobile CI/CD learning series:
 ## Progress
 - [x] Setup GitHub Actions
 - [x] Create basic workflow
-- [ ] Multi-environment workflow
+- [x] Multi-environment workflow
 - [ ] Reusable workflows
 
 ## Resources
